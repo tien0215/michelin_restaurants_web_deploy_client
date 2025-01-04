@@ -1,5 +1,6 @@
 import axios from "axios";
-const API_URL = "http://localhost:8080/api/restaurants";
+const API_URL =
+  "https://michelin-restaurants-web-deploy-server.onrender.com/api/restaurants";
 // Base URL for the API
 
 class RestaurantService {
@@ -32,7 +33,7 @@ class RestaurantService {
   postComment = async (id, content, userID) => {
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/comments/${id}`,
+        `https://michelin-restaurants-web-deploy-server.onrender.com/api/comments/${id}`,
         {
           content,
           user: userID, // Replace with actual user ID
